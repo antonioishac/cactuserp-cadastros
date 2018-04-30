@@ -53,13 +53,15 @@
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-core</artifactId>
 		</dependency>
-
+		
 		<!-- ORACLE database driver -->
+		<!--
 		<dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc7</artifactId>
             <version>12.1.0</version>
         </dependency>
+		-->
 
 		<!-- Hibernate Java 8 Support -->
 		<dependency>
