@@ -1,4 +1,4 @@
-package br.com.cactusdigital.erp.cadastros.service;
+package br.com.cactusdigital.erp.cadastros.service.impl;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.cactusdigital.erp.cadastros.model.EstadoCivil;
 import br.com.cactusdigital.erp.cadastros.repository.EstadoCivilRepository;
+import br.com.cactusdigital.erp.cadastros.service.EstadoCivilService;
 import br.com.cactusdigital.erp.cadastros.service.dto.EstadoCivilDTO;
 import br.com.cactusdigital.erp.cadastros.service.mapper.EstadoCivilMapper;
 

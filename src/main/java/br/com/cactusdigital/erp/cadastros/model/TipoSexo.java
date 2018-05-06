@@ -2,7 +2,7 @@ package br.com.cactusdigital.erp.cadastros.model;
 
 public enum TipoSexo {
 	
-	MASCULINO("Masculino"), FEMININO("Feminino");
+	M("Masculino"), F("Feminino");
 	
 	private String descricao;
 	

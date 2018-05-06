@@ -1,4 +1,4 @@
-package br.com.cactusdigital.erp.cadastros.service;
+package br.com.cactusdigital.erp.cadastros.service.impl;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import br.com.cactusdigital.erp.cadastros.model.Pessoa;
 import br.com.cactusdigital.erp.cadastros.repository.PessoaRepository;
+import br.com.cactusdigital.erp.cadastros.service.PessoaService;
 import br.com.cactusdigital.erp.cadastros.service.dto.PessoaDTO;
 import br.com.cactusdigital.erp.cadastros.service.mapper.PessoaMapper;
 
