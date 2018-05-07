@@ -3,6 +3,7 @@ package br.com.cactusdigital.erp.cadastros.service;
 import java.util.List;
 
 import br.com.cactusdigital.erp.cadastros.service.dto.PessoaJuridicaDTO;
+import br.com.cactusdigital.erp.cadastros.service.dto.search.PessoaJuridicaSearchDTO;
 
 /**
  * @author Antonio
@@ -16,7 +17,7 @@ public interface PessoaJuridicaService {
 	
 	PessoaJuridicaDTO buscarPeloCodigo(Long codigo);
 	
-	List<PessoaJuridicaDTO> buscarPeloNomeFantasia(String nome);
+	List<PessoaJuridicaSearchDTO> buscarPeloNomeFantasia(String nome);
 	
 	PessoaJuridicaDTO buscarPeloCnpj(String cnpj);
 	

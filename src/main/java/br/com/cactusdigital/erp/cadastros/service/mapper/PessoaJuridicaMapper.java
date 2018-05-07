@@ -9,7 +9,7 @@ import br.com.cactusdigital.erp.cadastros.service.dto.PessoaJuridicaDTO;
  * @author Antonio
  *
  */
-@Mapper(componentModel="spring")
+@Mapper(componentModel="spring", uses = {PessoaMapper.class})
 public interface PessoaJuridicaMapper extends EntityMapper<PessoaJuridicaDTO, PessoaJuridica> {
 
 }

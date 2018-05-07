@@ -2,8 +2,6 @@ package br.com.cactusdigital.erp.cadastros.service.dto;
 
 import java.util.Date;
 
-import br.com.cactusdigital.erp.cadastros.model.EstadoCivil;
-import br.com.cactusdigital.erp.cadastros.model.Pessoa;
 import br.com.cactusdigital.erp.cadastros.model.TipoRaca;
 import br.com.cactusdigital.erp.cadastros.model.TipoSangue;
 import br.com.cactusdigital.erp.cadastros.model.TipoSexo;
@@ -31,8 +29,9 @@ public class PessoaFisicaDTO {
 	private Integer reservistaCategoria;
 	private String nomeMae;
 	private String nomePai;	
-	private EstadoCivil estadoCivil;	
-	private Pessoa pessoa;
+	private EstadoCivilDTO estadoCivil;	
+	private PessoaDTO pessoa;
+	
 	/**
 	 * @return the codigo
 	 */
@@ -288,25 +287,25 @@ public class PessoaFisicaDTO {
 	/**
 	 * @return the estadoCivil
 	 */
-	public EstadoCivil getEstadoCivil() {
+	public EstadoCivilDTO getEstadoCivil() {
 		return estadoCivil;
 	}
 	/**
 	 * @param estadoCivil the estadoCivil to set
 	 */
-	public void setEstadoCivil(EstadoCivil estadoCivil) {
+	public void setEstadoCivil(EstadoCivilDTO estadoCivil) {
 		this.estadoCivil = estadoCivil;
 	}
 	/**
 	 * @return the pessoa
 	 */
-	public Pessoa getPessoa() {
+	public PessoaDTO getPessoa() {
 		return pessoa;
 	}
 	/**
 	 * @param pessoa the pessoa to set
 	 */
-	public void setPessoa(Pessoa pessoa) {
+	public void setPessoa(PessoaDTO pessoa) {
 		this.pessoa = pessoa;
 	}	
 }
