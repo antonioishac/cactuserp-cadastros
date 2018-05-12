@@ -18,5 +18,8 @@ public interface PessoaJuridicaRepository extends JpaRepository<PessoaJuridica, 
 	
 	@Query(name="cad.buscarPessoaJuridicaPeloNome", nativeQuery=true)
 	List<PessoaJuridicaSearchDTO> buscarPessoaJuridicaPeloNome(String nome);
+	
+	@Query(name="cad.buscarPessoaJuridicaPeloNome", nativeQuery=true)
+	PessoaJuridicaSearchDTO buscarPessoaJuridicaPeloCnpj(String cnpj);
 
 }
