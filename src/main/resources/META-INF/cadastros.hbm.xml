@@ -49,18 +49,29 @@
 	</named-native-query>	
 
 	<sql-result-set-mapping name="buscarPessoaJuridicaPeloNome">
-		<constructor-result target-class="br.com.cactusdigital.erp.cadastros.service.dto.search.PessoaJuridicaSearchDTO">
+		<constructor-result target-class="br.com.cactusdigital.erp.cadastros.service.dto.PessoaJuridicaDTO">
 		
-			<column name="CODIGO" class="java.lang.Long"/>
-			<column name="CNPJ" class="java.lang.String"/>
-			<column name="NOME_FANTASIA" class="java.lang.String"/>
-			<column name="INSCRICAO_MUNICIPAL" class="java.lang.String"/>
-			<column name="INSCRICAO_ESTADUAL" class="java.lang.String"/>
-			<column name="DATA_CONSTITUICAO" class="java.util.Date"/>
-			<column name="DS_TIPO_REGIME" class="java.lang.String"/>
-			<column name="TIPO_CRT" class="java.lang.String"/>
-			<column name="SUFRAMA" class="java.lang.String"/>
- 			<column name="NOME_PESSOA" class="java.lang.String"/>			
+			<column name="CODIGO" class="java.lang.Long"/> java.lang.Long,
+			<column name="CNPJ" class="java.lang.String"/> java.lang.String,
+			<column name="NOME_FANTASIA" class="java.lang.String"/> java.lang.String,
+			<column name="INSCRICAO_MUNICIPAL" class="java.lang.String"/> java.lang.String,
+			<column name="INSCRICAO_ESTADUAL" class="java.lang.String"/> java.lang.String,
+			<column name="DATA_CONSTITUICAO" class="java.util.Date"/>java.lang.String,
+			<column name="DS_TIPO_REGIME" class="java.lang.String"/>java.util.Date,
+			<column name="TIPO_CRT" class="java.lang.String"/>java.lang.String,
+			<column name="SUFRAMA" class="java.lang.String"/>java.lang.String,
+ 			<column name="NOME_PESSOA" class="java.lang.String"/>	java.lang.String,
+ 			
+ 			
+ 			
+ 			
+ 			
+ 			
+ 			
+ 			
+ 			
+ 			
+ 			java.lang.String		
 			
 		</constructor-result>
 	</sql-result-set-mapping>

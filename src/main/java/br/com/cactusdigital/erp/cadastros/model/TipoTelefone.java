@@ -18,7 +18,7 @@ public enum TipoTelefone {
 	TipoTelefone(Integer codigo, String descricao) {
 		this.codigo = codigo;
 		this.descricao = descricao;
-	}	
+	}
 
 	/**
 	 * @return the descricao

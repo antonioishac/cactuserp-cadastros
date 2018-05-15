@@ -6,12 +6,10 @@ package br.com.cactusdigital.erp.cadastros.model;
  */
 public enum TipoRegime {
 
-	LUCRO_REAL("Lucro Real"),
-	LUCRO_PRESUMIDO("Lucro Presumido"),
-	SIMPLES_NACIONAL("Simples Nacional");
-	
+	LUCRO_REAL("Lucro Real"), LUCRO_PRESUMIDO("Lucro Presumido"), SIMPLES_NACIONAL("Simples Nacional");
+
 	private String descricao;
-	
+
 	TipoRegime(String descricao) {
 		this.descricao = descricao;
 	}
@@ -22,5 +20,14 @@ public enum TipoRegime {
 	public String getDescricao() {
 		return descricao;
 	}
-	
+
+	public static TipoRegime parse(String param) {
+		for (TipoRegime tipoRegime : TipoRegime.values()) {
+			if (tipoRegime.descricao.equalsIgnoreCase(param)) {
+				return tipoRegime;
+			}
+		}
+		return null;
+	}
+
 }

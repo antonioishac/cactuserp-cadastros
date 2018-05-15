@@ -17,6 +17,32 @@ public class PessoaJuridicaDTO {
 	private String suframa;	
 	private PessoaDTO pessoa;	
 	
+	public PessoaJuridicaDTO(
+		
+			Long codigo, 
+			String cnpj, 
+			String nomeFantasia, 
+			String inscricaoMunicipal,
+			String inscricaoEstadual, 
+			Date dataConstituicao, 
+			String tipoRegime, 
+			String tipoCrt, 
+			String suframa,
+			String pessoa) {		
+		
+		this.codigo = codigo;
+		this.cnpj = cnpj;
+		this.nomeFantasia = nomeFantasia;
+		this.inscricaoMunicipal = inscricaoMunicipal;
+		this.inscricaoEstadual = inscricaoEstadual;
+		this.dataConstituicao = dataConstituicao;
+		this.tipoRegime = TipoRegime.parse(tipoRegime);
+		this.tipoCrt = tipoCrt;
+		this.suframa = suframa;
+		
+		this.pessoa = new PessoaDTO();
+		this.pessoa.setNome(pessoa);
+	}
 	/**
 	 * @return the codigo
 	 */
