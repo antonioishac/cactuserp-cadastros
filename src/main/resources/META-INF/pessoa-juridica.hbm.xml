@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd"
 	version="2.1">
 	
-	<named-native-query name="buscarPessoaJuridicaPeloNome"  result-set-mapping="buscarPessoaJuridicaPeloNome2">
+	<named-native-query name="buscarPessoaJuridicaPeloNome"  result-set-mapping="buscarPessoaJuridicaPeloNomeMapper">
 		<query>
 			<![CDATA[
 		 	SELECT 
@@ -26,7 +26,7 @@
 		</query>
 	</named-native-query>
 	
-	<sql-result-set-mapping name="buscarPessoaJuridicaPeloNome2">
+	<sql-result-set-mapping name="buscarPessoaJuridicaPeloNomeMapper">
 		<constructor-result target-class="br.com.cactusdigital.erp.cadastros.service.dto.PessoaJuridicaDTO">
 			<column name="CODIGO" class="java.lang.Long"/> 
 			<column name="CNPJ" class="java.lang.String"/>

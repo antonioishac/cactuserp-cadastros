@@ -21,8 +21,8 @@ public class PessoaJuridicaDTO {
 	public PessoaJuridicaDTO() {
 		
 	}
-	public PessoaJuridicaDTO(
-		
+	
+	public PessoaJuridicaDTO(		
 			Long codigo, 
 			String cnpj, 
 			String nomeFantasia, 
@@ -33,7 +33,6 @@ public class PessoaJuridicaDTO {
 			String tipoCrt, 
 			String suframa,
 			String pessoa) {		
-		
 		this.codigo = codigo;
 		this.cnpj = cnpj;
 		this.nomeFantasia = nomeFantasia;
@@ -42,11 +41,11 @@ public class PessoaJuridicaDTO {
 		this.dataConstituicao = dataConstituicao;
 		this.tipoRegime = TipoRegime.parse(tipoRegime);
 		this.tipoCrt = tipoCrt;
-		this.suframa = suframa;
-		
+		this.suframa = suframa;		
 		this.pessoa = new PessoaDTO();
 		this.pessoa.setNome(pessoa);
 	}
+	
 	/**
 	 * @return the codigo
 	 */
