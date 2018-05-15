@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import br.com.cactusdigital.erp.cadastros.model.PessoaJuridica;
-import br.com.cactusdigital.erp.cadastros.service.dto.search.PessoaJuridicaSearchDTO;
+import br.com.cactusdigital.erp.cadastros.service.dto.PessoaJuridicaDTO;
 
 /**
  * @author Antonio
@@ -15,11 +15,11 @@ import br.com.cactusdigital.erp.cadastros.service.dto.search.PessoaJuridicaSearc
  */
 @Repository
 public interface PessoaJuridicaRepository extends JpaRepository<PessoaJuridica, Long> {
-	
-	@Query(name="cad.buscarPessoaJuridicaPeloNome", nativeQuery=true)
-	List<PessoaJuridicaSearchDTO> buscarPessoaJuridicaPeloNome(String nome);
-	
-	@Query(name="cad.buscarPessoaJuridicaPeloNome", nativeQuery=true)
-	PessoaJuridicaSearchDTO buscarPessoaJuridicaPeloCnpj(String cnpj);
+
+	@Query(name = "buscarPessoaJuridicaPeloNome", nativeQuery = true)
+	List<PessoaJuridicaDTO> buscarPessoaJuridicaPeloNome(String nome);
+
+	// @Query(name="cad.buscarPessoaJuridicaPeloCnp", nativeQuery=true)
+	// PessoaJuridicaSearchDTO buscarPessoaJuridicaPeloCnpj(String cnpj);
 
 }

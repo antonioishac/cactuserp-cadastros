@@ -10,7 +10,6 @@ import br.com.cactusdigital.erp.cadastros.model.PessoaJuridica;
 import br.com.cactusdigital.erp.cadastros.repository.PessoaJuridicaRepository;
 import br.com.cactusdigital.erp.cadastros.service.PessoaJuridicaService;
 import br.com.cactusdigital.erp.cadastros.service.dto.PessoaJuridicaDTO;
-import br.com.cactusdigital.erp.cadastros.service.dto.search.PessoaJuridicaSearchDTO;
 import br.com.cactusdigital.erp.cadastros.service.mapper.PessoaJuridicaMapper;
 
 /**
@@ -51,8 +50,8 @@ public class PessoaJuridicaServiceImpl implements PessoaJuridicaService {
 
 	@Override
 	@Transactional(readOnly=true)
-	public List<PessoaJuridicaSearchDTO> buscarPeloNomeFantasia(String nome) {
-		List<PessoaJuridicaSearchDTO> listaPessoaJuridica = repository.buscarPessoaJuridicaPeloNome("%" + nome + "%");
+	public List<PessoaJuridicaDTO> buscarPeloNomeFantasia(String nome) {
+		List<PessoaJuridicaDTO> listaPessoaJuridica = repository.buscarPessoaJuridicaPeloNome("%" + nome + "%");
 		return listaPessoaJuridica;
 	}
 
