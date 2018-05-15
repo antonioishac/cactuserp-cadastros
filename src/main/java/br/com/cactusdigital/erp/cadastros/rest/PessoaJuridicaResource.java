@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.cactusdigital.erp.cadastros.service.PessoaJuridicaService;
 import br.com.cactusdigital.erp.cadastros.service.dto.PessoaJuridicaDTO;
-import br.com.cactusdigital.erp.cadastros.service.dto.search.PessoaJuridicaSearchDTO;
 
 @RestController
 @RequestMapping("/api/pessoa-juridica")
@@ -36,7 +35,7 @@ public class PessoaJuridicaResource {
 	}
 	
 	@GetMapping("/{nome}")
-	public List<PessoaJuridicaSearchDTO> listaPessoaJuridicaPeloNome(@PathVariable String nome){
+	public List<PessoaJuridicaDTO> listaPessoaJuridicaPeloNome(@PathVariable String nome){
 		return service.buscarPeloNomeFantasia(nome.equals(StringUtils.EMPTY) ? "" : nome);
 	}
 

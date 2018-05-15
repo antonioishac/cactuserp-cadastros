@@ -17,6 +17,10 @@ public class PessoaJuridicaDTO {
 	private String suframa;	
 	private PessoaDTO pessoa;	
 	
+	
+	public PessoaJuridicaDTO() {
+		
+	}
 	public PessoaJuridicaDTO(
 		
 			Long codigo, 
