@@ -1,13 +1,20 @@
 package br.com.cactusdigital.erp.cadastros.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 /**
  * @author Antonio Ishac
@@ -78,6 +85,24 @@ public class Pessoa implements Serializable {
 	 */
 	@Column(name="TRANSPORTADORA")
 	private String transportadora;
+	
+	@OneToOne(fetch = FetchType.LAZY, mappedBy = "pessoa", cascade = CascadeType.ALL)
+    private PessoaFisica pessoaFisica;
+	
+	@OneToOne(fetch = FetchType.LAZY, mappedBy = "pessoa", cascade = CascadeType.ALL)
+    private PessoaJuridica pessoaJuridica;
+    
+	@NotNull
+	@OneToMany(mappedBy = "pessoa", orphanRemoval = true, cascade = CascadeType.ALL)
+    private List<Contato> contatos = new ArrayList<>();
+    
+	@NotNull
+	@OneToMany(mappedBy = "pessoa", orphanRemoval = true, cascade = CascadeType.ALL)
+	private List<Endereco> enderecos = new ArrayList<>();
+	
+	@NotNull
+	@OneToMany(mappedBy = "pessoa", orphanRemoval = true, cascade = CascadeType.ALL)
+    private List<Telefone> telefones = new ArrayList<>();
 
 	/**
 	 * @return the codigo
@@ -204,6 +229,76 @@ public class Pessoa implements Serializable {
 	public void setTransportadora(String transportadora) {
 		this.transportadora = transportadora;
 	}
+	
+	/**
+	 * @return the pessoaFisica
+	 */
+	public PessoaFisica getPessoaFisica() {
+		return pessoaFisica;
+	}
+
+	/**
+	 * @param pessoaFisica the pessoaFisica to set
+	 */
+	public void setPessoaFisica(PessoaFisica pessoaFisica) {
+		this.pessoaFisica = pessoaFisica;
+	}
+
+	/**
+	 * @return the pessoaJuridica
+	 */
+	public PessoaJuridica getPessoaJuridica() {
+		return pessoaJuridica;
+	}
+
+	/**
+	 * @param pessoaJuridica the pessoaJuridica to set
+	 */
+	public void setPessoaJuridica(PessoaJuridica pessoaJuridica) {
+		this.pessoaJuridica = pessoaJuridica;
+	}
+
+	/**
+	 * @return the contatos
+	 */
+	public List<Contato> getContatos() {
+		return contatos;
+	}
+
+	/**
+	 * @param contatos the contatos to set
+	 */
+	public void setContatos(List<Contato> contatos) {
+		this.contatos = contatos;
+	}
+
+	/**
+	 * @return the enderecos
+	 */
+	public List<Endereco> getEnderecos() {
+		return enderecos;
+	}
+
+	/**
+	 * @param enderecos the enderecos to set
+	 */
+	public void setEnderecos(List<Endereco> enderecos) {
+		this.enderecos = enderecos;
+	}
+
+	/**
+	 * @return the telefones
+	 */
+	public List<Telefone> getTelefones() {
+		return telefones;
+	}
+
+	/**
+	 * @param telefones the telefones to set
+	 */
+	public void setTelefones(List<Telefone> telefones) {
+		this.telefones = telefones;
+	}
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
@@ -244,5 +339,5 @@ public class Pessoa implements Serializable {
 		return "Pessoa [codigo=" + codigo + ", nome=" + nome + ", tipoPessoa=" + tipoPessoa + ", email=" + email
 				+ ", site=" + site + ", cliente=" + cliente + ", fornecedor=" + fornecedor + ", colaborador="
 				+ colaborador + ", transportadora=" + transportadora + "]";
-	}
+	}	
 }

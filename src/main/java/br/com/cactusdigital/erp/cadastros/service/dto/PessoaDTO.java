@@ -1,5 +1,8 @@
 package br.com.cactusdigital.erp.cadastros.service.dto;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author Antonio Ishac
  *
@@ -15,7 +18,12 @@ public class PessoaDTO {
 	private String fornecedor;
 	private String colaborador;
 	private String transportadora;
-
+	private PessoaFisicaDTO pessoaFisica;
+	private PessoaJuridicaDTO pessoaJuridica;
+	private List<ContatoDTO> contatos = new ArrayList<>();
+	private List<EnderecoDTO> enderecos = new ArrayList<>();
+	private List<TelefoneDTO> telefones = new ArrayList<>();
+	
 	/**
 	 * @return the codigo
 	 */
@@ -140,5 +148,75 @@ public class PessoaDTO {
 	 */
 	public void setTransportadora(String transportadora) {
 		this.transportadora = transportadora;
+	}
+
+	/**
+	 * @return the pessoaFisica
+	 */
+	public PessoaFisicaDTO getPessoaFisica() {
+		return pessoaFisica;
+	}
+
+	/**
+	 * @param pessoaFisica the pessoaFisica to set
+	 */
+	public void setPessoaFisica(PessoaFisicaDTO pessoaFisica) {
+		this.pessoaFisica = pessoaFisica;
+	}
+
+	/**
+	 * @return the pessoaJuridica
+	 */
+	public PessoaJuridicaDTO getPessoaJuridica() {
+		return pessoaJuridica;
+	}
+
+	/**
+	 * @param pessoaJuridica the pessoaJuridica to set
+	 */
+	public void setPessoaJuridica(PessoaJuridicaDTO pessoaJuridica) {
+		this.pessoaJuridica = pessoaJuridica;
+	}
+
+	/**
+	 * @return the contatos
+	 */
+	public List<ContatoDTO> getContatos() {
+		return contatos;
+	}
+
+	/**
+	 * @param contatos the contatos to set
+	 */
+	public void setContatos(List<ContatoDTO> contatos) {
+		this.contatos = contatos;
+	}
+
+	/**
+	 * @return the enderecos
+	 */
+	public List<EnderecoDTO> getEnderecos() {
+		return enderecos;
+	}
+
+	/**
+	 * @param enderecos the enderecos to set
+	 */
+	public void setEnderecos(List<EnderecoDTO> enderecos) {
+		this.enderecos = enderecos;
+	}
+
+	/**
+	 * @return the telefones
+	 */
+	public List<TelefoneDTO> getTelefones() {
+		return telefones;
+	}
+
+	/**
+	 * @param telefones the telefones to set
+	 */
+	public void setTelefones(List<TelefoneDTO> telefones) {
+		this.telefones = telefones;
 	}
 }
