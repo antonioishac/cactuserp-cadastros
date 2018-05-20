@@ -18,7 +18,7 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name="TB_ENDERECO")
+@Table(name="TB_TELEFONE")
 public class Telefone implements Serializable {
 	
 	/**
@@ -36,12 +36,12 @@ public class Telefone implements Serializable {
 	
 	@Column(name="NUMERO")
 	private String numero;
-	
+		              
 	@Column(name="OBSERVACAO")
 	private String observacao;
 	
 	@OneToOne
-	@JoinColumn(referencedColumnName="codigo", name="CODIGO_ESTADO_CIVIL")
+	@JoinColumn(referencedColumnName="codigo", name="CODIGO_PESSOA")
 	private Pessoa pessoa;
 
 	/**
