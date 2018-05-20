@@ -2,10 +2,13 @@ package br.com.cactusdigital.erp.cadastros.service.dto;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import br.com.cactusdigital.erp.cadastros.model.TipoRaca;
 import br.com.cactusdigital.erp.cadastros.model.TipoSangue;
 import br.com.cactusdigital.erp.cadastros.model.TipoSexo;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class PessoaFisicaDTO {
 	
 	private Long codigo;	
