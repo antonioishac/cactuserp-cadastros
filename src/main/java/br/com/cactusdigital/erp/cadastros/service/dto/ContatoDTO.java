@@ -1,5 +1,7 @@
 package br.com.cactusdigital.erp.cadastros.service.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * @author Antonio
  *
@@ -12,6 +14,8 @@ public class ContatoDTO {
 	private String foneComercial;
 	private String foneResidencial;
 	private String foneCelular;
+	
+	@JsonIgnoreProperties("pessoa")
 	private PessoaDTO pessoa;
 	/**
 	 * @return the codigo

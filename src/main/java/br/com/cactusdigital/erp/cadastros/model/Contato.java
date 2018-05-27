@@ -8,11 +8,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name="TB_CONTATO")
+@JsonIgnoreProperties(ignoreUnknown  = true)
 public class Contato implements Serializable {
 	
 	/**
@@ -40,8 +43,9 @@ public class Contato implements Serializable {
 	@Column(name="FONE_CELULAR")
 	private String foneCelular;	
 	
-	@OneToOne
-	@JoinColumn(referencedColumnName="codigo", name="CODIGO_PESSOA")
+	@JsonIgnoreProperties("pessoa")
+	@ManyToOne
+	@JoinColumn(name="CODIGO_PESSOA")
 	private Pessoa pessoa;
 
 	/**

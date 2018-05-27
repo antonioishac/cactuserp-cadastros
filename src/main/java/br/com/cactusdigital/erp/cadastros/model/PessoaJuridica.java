@@ -90,8 +90,7 @@ public class PessoaJuridica implements Serializable {
 	
 	/**
 	 * Pessoa vinculada a pessoa juridica
-	 */
-	@NotNull
+	 */	
 	@OneToOne
 	@JoinColumn(referencedColumnName="codigo", name="CODIGO_PESSOA")
 	private Pessoa pessoa;

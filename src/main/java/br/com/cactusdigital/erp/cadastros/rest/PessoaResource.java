@@ -35,8 +35,8 @@ public class PessoaResource {
 	 * @return
 	 */
 	@PostMapping
-	public ResponseEntity<PessoaDTO> criarPessoa(@RequestBody PessoaDTO pessoaDTO) {
-		PessoaDTO pessoaSalva = service.salvarPessoa(pessoaDTO);
+	public ResponseEntity<PessoaDTO> criarPessoa(@RequestBody PessoaDTO pessoa) {
+		PessoaDTO pessoaSalva = service.salvarPessoa(pessoa);
 		return ResponseEntity.status(HttpStatus.CREATED).body(pessoaSalva);
 	}
 

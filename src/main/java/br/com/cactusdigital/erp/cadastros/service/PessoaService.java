@@ -10,7 +10,7 @@ import br.com.cactusdigital.erp.cadastros.service.dto.PessoaDTO;
  */
 public interface PessoaService {
 
-	PessoaDTO salvarPessoa(PessoaDTO pessoaDTO);
+	PessoaDTO salvarPessoa(PessoaDTO pessoa);
 
 	List<PessoaDTO> listarTodos();
 

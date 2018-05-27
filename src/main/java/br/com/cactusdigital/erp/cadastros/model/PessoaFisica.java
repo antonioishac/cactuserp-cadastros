@@ -171,8 +171,7 @@ public class PessoaFisica implements Serializable {
 	
 	/**
 	 * referencia da tabela pessoa para pessoa fisica
-	 */
-	@NotNull
+	 */	
 	@OneToOne
 	@JoinColumn(referencedColumnName="codigo", name="CODIGO_PESSOA")
 	private Pessoa pessoa;

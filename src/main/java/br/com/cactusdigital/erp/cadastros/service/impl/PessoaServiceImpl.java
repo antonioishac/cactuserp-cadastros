@@ -26,8 +26,9 @@ public class PessoaServiceImpl implements PessoaService {
 
 	@Override
 	public PessoaDTO salvarPessoa(PessoaDTO pessoaDTO) {
+		pessoaDTO.getContatos().forEach(c -> c.setPessoa(pessoaDTO));
 		Pessoa pessoa = mapper.toEntity(pessoaDTO);
-		pessoa = repository.save(pessoa);
+		pessoa = repository.save(pessoa);		
 		return mapper.toDto(pessoa);
 	}
 
